@@ -8,7 +8,7 @@ import json
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
  
-API_URL = os.getenv("API_URL")
+API_URL = "https://ml-api-phn4j6lmdq-uc.a.run.app"
 BASIC_AUTH_USERNAME = os.getenv("BASIC_AUTH_USERNAME")
 BASIC_AUTH_PASSWORD = os.getenv("BASIC_AUTH_PASSWORD")
 
@@ -41,7 +41,7 @@ def prediction(Gender, Married, ApplicantIncome, LoanAmount, Credit_History):
         "Credit_History": Credit_History
     }
 
-    prediction = requests.post(API_URL + '/score', json=data, auth=HTTPBasicAuth(BASIC_AUTH_USERNAME, BASIC_AUTH_PASSWORD))
+    prediction = requests.post(API_URL + '/score', json=data)
      
     if prediction == 0:
         pred = 'Rejected'

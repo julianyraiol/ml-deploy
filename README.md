@@ -47,4 +47,4 @@ Disponível em http://localhost:8501
 
 
 # Deploy da API na GCP
-O endereço da API está em http://34.72.103.113:5000
+O endereço da API está em https://ml-api-phn4j6lmdq-uc.a.run.app/
