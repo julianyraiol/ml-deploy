@@ -1,9 +1,17 @@
-mlops-deploy
+Previsão de Empréstimos Automatizados
 ==============================
 
-A short description of the project.
+A empresa procura automatizar em tempo real o processo de qualificação do crédito com base nas informações prestadas pelos clientes durante o preenchimento de um formulário de candidatura online. Espera-se com o desenvolvimento de modelos de ML que possam ajudar a empresa a prever a aprovação de empréstimos na aceleração do processo de tomada de decisão para determinar se um solicitante é elegível para um empréstimo ou não.
 
-Project Organization
+## Dataset
+* [Loan Predication Dataset](https://www.kaggle.com/ninzaami/loan-predication)
+
+## Index
+* [Dataset](https://github.com/julianyraiol/ml-deploy/blob/main/data/raw/train_loan.csv)
+* [Notebook](https://github.com/julianyraiol/ml-deploy/blob/main/Trab_Final_Previsão_emprestimo.ipynb)
+* [Flask API](https://github.com/julianyraiol/ml-deploy/blob/main/src/app/api.py)
+
+Organização do projeto
 ------------
 
     ├── LICENSE
