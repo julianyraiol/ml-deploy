@@ -22,7 +22,7 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-# Executar API
+## Executar API
 
 ```bash
 $ cd ml-deploy/src/app
@@ -31,7 +31,7 @@ $ python api.py
 
 Disponível em http://0.0.0.0:5000
 
-# Executar Streamlit
+## Executar Streamlit
 
 ```bash
 $ cd ml-deploy
@@ -39,3 +39,8 @@ $ python api.py
 ```
 
 Disponível em http://localhost:8501
+
+
+# Deploy da API na GCP
+
+O endereço da API está em http://34.72.103.113:5000
