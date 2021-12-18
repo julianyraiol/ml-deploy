@@ -16,6 +16,12 @@ A empresa procura automatizar em tempo real o processo de qualificação do cré
 É preciso instalar a virtualenv para configurar as dependências do projeto.
 
 ```bash
+$ sudo apt-get install python3-pip
+$ sudo pip3 install virtualenv
+$ 
+```
+
+```bash
 $ git clone https://github.com/julianyraiol/ml-deploy
 $ virtualenv venv
 $ source venv/bin/activate
@@ -32,7 +38,6 @@ $ python api.py
 Disponível em http://0.0.0.0:5000
 
 ## Executar Streamlit
-
 ```bash
 $ cd ml-deploy
 $ python api.py
@@ -42,5 +47,4 @@ Disponível em http://localhost:8501
 
 
 # Deploy da API na GCP
-
 O endereço da API está em http://34.72.103.113:5000
