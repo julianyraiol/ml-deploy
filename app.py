@@ -41,7 +41,7 @@ def prediction(Gender, Married, ApplicantIncome, LoanAmount, Credit_History):
         "Credit_History": Credit_History
     }
 
-    prediction = requests.post(API_URL + '/score', json=data)
+    prediction = requests.post(API_URL + '/score', json=data, auth=HTTPBasicAuth(BASIC_AUTH_USERNAME, BASIC_AUTH_PASSWORD))
      
     if prediction == 0:
         pred = 'Rejected'

@@ -38,5 +38,5 @@ jobs:
           --region ${{ env.REGION }} \
           --image gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} \
           --platform "managed" \
-          --quiet
+          --quiet \
           --port 5000 
