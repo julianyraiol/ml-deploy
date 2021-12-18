@@ -2,9 +2,8 @@ from flask import Flask, request, jsonify
 from flask_basicauth import BasicAuth
 
 # import pandas as pd
-
 import numpy as np
-import pickle
+from predict_model import prediction
 import os
 
 from dotenv import load_dotenv, find_dotenv
@@ -19,12 +18,6 @@ basic_auth = BasicAuth(app)
 
 columns = ["Gender", "Married", "ApplicantIncome", "LoanAmount", "Credit_History"]
 
-def load_model(filename = "classifier.pkl"):
-    pickle_in = open(filename, 'rb')
-    return pickle.load(pickle_in) 
-
-classifier = load_model("../../models/classifier.pkl")
-
 @app.route("/score", methods=['POST'])
 @basic_auth.required
 def get_score():
@@ -32,7 +25,9 @@ def get_score():
 
     payload = np.array(data[col] for col in columns)
 
-    return data
+    result = prediction(data["Gender"], data["Married"], data["ApplicantIncome"], data["LoanAmount"], data["Credit_History"]) 
+
+    return result
 
 # Rota padrão
 @app.route('/')
