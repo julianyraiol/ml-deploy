@@ -31,9 +31,9 @@ def prediction(Gender, Married, ApplicantIncome, LoanAmount, Credit_History):
         
     if LoanAmount == "":
         LoanAmount = 0    
+    
     LoanAmount = LoanAmount / 1000
     
-    print([Gender, Married, ApplicantIncome, LoanAmount, Credit_History])
     # Making predictions 
     prediction = classifier.predict( 
         [[Gender, Married, ApplicantIncome, LoanAmount, Credit_History]])

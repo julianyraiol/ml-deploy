@@ -12,10 +12,6 @@ API_URL = os.getenv("API_URL")
 BASIC_AUTH_USERNAME = os.getenv("BASIC_AUTH_USERNAME")
 BASIC_AUTH_PASSWORD = os.getenv("BASIC_AUTH_PASSWORD")
 
-# loading the trained model
-# pickle_in = open('classifier.pkl', 'rb') 
-# classifier = pickle.load(pickle_in)
-   
 # defining the function which will make the prediction using the data which the user inputs 
 def prediction(Gender, Married, ApplicantIncome, LoanAmount, Credit_History):   
  
@@ -79,7 +75,6 @@ def main():
         
         result = prediction(Gender, Married, ApplicantIncome, LoanAmount, Credit_History) 
         st.success('Your loan is {}'.format(result))
-        print(LoanAmount)
      
 if __name__=='__main__': 
     main()
