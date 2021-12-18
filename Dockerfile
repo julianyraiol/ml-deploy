@@ -15,5 +15,4 @@ RUN pip3 install -r requirements.txt
 COPY ./src/ /usr/src
 COPY ./models /usr/models
 
-ENTRYPOINT [ "python3" ]
-CMD [ "src/app/api.py" ]
+CMD [ "python3", "api.py" ]
