@@ -5,7 +5,7 @@ def load_model(filename = "classifier.pkl"):
     pickle_in = open(filename, 'rb')
     return pickle.load(pickle_in) 
 
-classifier = load_model("../../models/classifier.pkl")
+classifier = load_model("models/classifier.pkl")
 
 # defining the function which will make the prediction using the data which the user inputs 
 def prediction(Gender, Married, ApplicantIncome, LoanAmount, Credit_History):   
