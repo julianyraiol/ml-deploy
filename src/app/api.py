@@ -21,10 +21,8 @@ columns = ["Gender", "Married", "ApplicantIncome", "LoanAmount", "Credit_History
 @app.route("/score", methods=['POST'])
 @basic_auth.required
 def get_score():
-    data = request.get_json()
+    data = request.json
     print(data)
-    payload = np.array(data[col] for col in columns)
-
     result = prediction(data["Gender"], data["Married"], data["ApplicantIncome"], data["LoanAmount"], data["Credit_History"]) 
 
     return result
