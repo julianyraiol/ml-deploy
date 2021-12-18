@@ -21,11 +21,10 @@ columns = ["Gender", "Married", "ApplicantIncome", "LoanAmount", "Credit_History
 @app.route("/score", methods=['POST'])
 @basic_auth.required
 def get_score():
-    data = request.json
-
+    data = request.get_json()
+    print(data)
     payload = np.array(data[col] for col in columns)
 
-    print(data)
     result = prediction(data["Gender"], data["Married"], data["ApplicantIncome"], data["LoanAmount"], data["Credit_History"]) 
 
     return result
@@ -36,4 +35,4 @@ def home():
     return 'API de Consulta de Crédito'
 
 # Subir a API
-app.run(debug=True)
+app.run(debug=True, host="0.0.0.0")
